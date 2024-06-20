@@ -10,13 +10,12 @@ resource "aws_lb_target_group_attachment" "TGA" {
   target_id        = aws_instance.vm12[0].id
   port             = 80
 }
-/*
 resource "aws_lb" "ALB" {
   name               = "ALB"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = ["sg-0a1c59a7fbe8b68e8"]
-  subnets            = ["subnet-0019df2310375625c", "subnet-0a1dcabf4a3bb3bd6"]
+  security_groups    = ["sg-0dbd20cb24388a595"]
+  subnets            = ["subnet-0a8379124af2cbd5e", "subnet-07445c4aeef8321a8"]
 
 }
 
@@ -28,4 +27,4 @@ resource "aws_lb_listener" "ALBL" {
     type             = "forward"
     target_group_arn = aws_lb_target_group.TG1.arn
   }
-}*/
+}
